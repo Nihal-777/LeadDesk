@@ -23,12 +23,12 @@ app.use(helmet());
 
 /**
  * Cross-Origin Resource Sharing (CORS):
- * Restricts access to the API endpoints to client requests originating from the CLIENT_URL.
+ * Dynamically reflects the requesting client's origin (origin: true) to ensure
+ * smooth API requests from Vercel preview domains and local setups.
  */
-const allowedOrigin = process.env.CLIENT_URL || 'http://localhost:5173';
 app.use(
   cors({
-    origin: allowedOrigin,
+    origin: true,
     methods: ['GET', 'POST', 'PATCH', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
