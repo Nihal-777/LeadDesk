@@ -1,0 +1,33 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Build outputs
+dist/
+build/
+.tsbuildinfo
+
+# Environment configurations
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE / System files
+.DS_Store
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Diagnostic logs and brain folders
+.gemini/
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
